@@ -23,25 +23,73 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-move1 = input("Left or Right? _: ")
-if move1=="Left":
-    move2 = input("Swim or Wait? _: ")
-    if move2=="Wait":
-        move3 = input("Which door? Red,Blue or Yellow: ")
-        if move3=="Red":
-            print("Burned By Fire.")
+choice1 = input("You arrived at cross roads.: LEFT or RIGHT:: ")
+if choice1=="LEFT":
+    print("You Entered into a Forest.")
+    print("Attacked by wild animals")
+    print("Game Over!")
+elif choice1=="RIGHT":
+    print("You`re walking towards the sea")
+    choice2=input("You hear a sound. WAIT or MOVE: ")
+    if choice2=="WAIT":
+        print("Found a hidden path")
+        choice3=input("hidden path leads to a river. SWIM or WAIT")
+        if choice3=="SWIM":
+            print("Attacked by Hydra")
             print("Game Over")
-        elif move3=="Blue":
-            print("Eaten By Beasts")
-            print("Game Over")
-        elif move3=="Yellow":
-            print("You Win!")
+        elif choice3=="WAIT":
+            print("Build a Raft")
+            print("Raft takes you into the cave")
+            choice4=input("TURN BACK or ENTER CAVE")
+            if choice4=="TURN BACK":
+                print("Lost Forever")
+                print("Game Over")
+            elif choice4=="ENTER CAVE":
+                print("Three Doors appear.")
+                choice5=input("Choose any one| RED, BLUE, YELLOW")
+                if choice5=="RED":
+                    print("Burned By Fire")
+                    print("Game Over")
+                elif choice5=="YELLOW":
+                    print("Eaten by Beasts")
+                    print("Game Over")
+                elif choice5=="BLUE":
+                    print("You`ve entered Tunnel")
+                    print("Tunnel splits into two again!")
+                    choice6=input("Choose LEFT OR RIGHT")
+                    if choice6=="LEFT":
+                        print("Ancient lock found")
+                        choice7=input("USE KEY or FORCE DOOR")
+                        if choice7=="USE KEY":
+                            print("Doors Open")
+                            choice8=input("Now Choose. TAKE TREASURES or INSPECT ROOM")
+                            if choice8=="TAKE TREASURES":
+                                print("YOU WIN!!")
+                            elif choice8=="INSPECT ROOM":
+                                print("You`ve accidentally stepped on the trap")
+                            else:
+                                print("Game Over")
+                        elif choice7=="FORCE DOOR":
+                            print("Trap Activates. You`re Dead!")
+                            print("Game Over")
+                        else:
+                            print("Game Over")
+                    elif choice6=="RIGHT":
+                        print("Fell into Darkness")
+                        print("Game Over")
+                    else:
+                        print("Game Over")
+
+                else:
+                    print("Game Over")
         else:
             print("Game Over")
-
+    elif choice2=="MOVE":
+        print("Fell into a quicksand")
+        print("Game Over")
     else:
-        print("Attacked by trout")
-        print("Game Over!")
+        print("Game Over")
 else:
-    print("Fall into a hole")
-    print("Game Over!")
+    print("Game Over")
+
+
